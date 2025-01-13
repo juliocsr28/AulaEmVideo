@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font: normal 10pt Arial;
+        }
+        input {
+            font: normal 10pt Arial;
+            width: 100px;
+            height: 20px;
+        }
+        div#soma {
+            margin-top: 20px;
+        
+        }
+        div#subtrai {
+            margin-top: 20px;
+        }
+        div#multiplica {
+            margin-top: 20px;
+        }
+        div#divide {
+            margin-top: 20px;
+        }
+        #buttonm {
+            font: normal 10pt Arial;
+            width: 150px;
+            height: 20px;
+        }
+        #buttons {
+            font: normal 10pt Arial;
+            width: 150px;
+            height: 20px;
+        }
+        #buttonv {
+            font: normal 10pt Arial;
+            width: 150px;
+            height: 20px;
+        }
+        #buttond {
+            font: normal 10pt Arial;
+            width: 150px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>Soma</p>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" id="buttonm" value="Somar" onclick="Somar()">
+    <div id="soma">resultado</div>
+    <p> Subtração</p>
+    <input type="number" name="txtn3" id="txtn3">
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" id="buttons" value="Subtrair" onclick="Subtrair()">
+    <div id="subtrai">resultado</div>
+    <p> Multiplicação</p>
+    <input type="number" name="txtn5" id="txtn5">
+    <input type="number" name="txtn6" id="txtn6">
+    <input type="button" id="buttonv" value="Multiplicar" onclick="Multiplicar()">
+    <div id="multiplica">resultado</div>
+    <p> Divisão</p>
+    <input type="number" name="txtn7" id="txtn7">
+    <input type="number" name="txtn8" id="txtn8">
+    <input type="button" id="buttond" value="Dividir" onclick="Dividir()">
+    <div id="divide">resultado</div>
+    <script>
+        function Somar() {
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var soma = document.getElementById('soma')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            soma.innerHTML = `a Soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+        function Subtrair() {
+            var tn3 = document.getElementById('txtn3')
+            var tn4 = document.querySelector('input#txtn4')
+            var subtrai = document.getElementById('subtrai')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var menos = n3 - n4
+            subtrai.innerHTML = `a Subtração entre ${n3} e ${n4} é igual a <strong>${menos}</strong>`
+        }
+        function Multiplicar() {
+            var tn5 = document.getElementById('txtn5')
+            var tn6 = document.querySelector('input#txtn6')
+            var multiplica = document.getElementById('multiplica')
+            var n5 = Number(tn5.value)
+            var n6 = Number(tn6.value)
+            var vezes = n5 * n6
+            multiplica.innerHTML = `a multiplicação entre ${n5} e ${n6} é igual a <strong>${vezes}</strong>`
+        }
+        function Dividir() {
+            var tn7 = document.getElementById('txtn7')
+            var tn8 = document.querySelector('input#txtn8')
+            var divide = document.getElementById('divide')
+            var n7 = Number(tn7.value)
+            var n8 = Number(tn8.value)
+            var dividir = n7 / n8
+            divide.innerHTML = `a divisão entre ${n7} e ${n8} é igual a <strong>${dividir}</strong>`
+        }
+    </script>
+</body>
+</html>
