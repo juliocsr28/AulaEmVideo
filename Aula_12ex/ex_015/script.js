@@ -14,37 +14,27 @@ function verificar() {
         if (fsex[0].checked) {
             genero = 'Homem'
             if (idade >= 0 && idade <10){
-                //Criança
                 img.setAttribute('src', 'bebem.jpg')
             } else if (idade < 21) {
-                //Jovem
                 img.setAttribute('src', 'jovemm.jpg')
             } else if (idade <50) {
-                //adulto
                 img.setAttribute('src', 'adulto.jpg')
             } else if (idade < 100) {
-                //idoso
                 img.setAttribute('src', 'velho.jpg')
             } else {
-                //Se erguer os braços Deus puxa.
                 img.setAttribute('src', 'mumia.jpg')
             }
         } else {
             genero = 'Mulher'
             if (idade >= 0 && idade <10){
-                //Criança
                 img.setAttribute('src', 'bebef.jpg')
             } else if (idade < 21) {
-                //Jovem
                 img.setAttribute('src', 'bebef.jpg')
             } else if (idade <50) {
-                //adulto
                 img.setAttribute('src', 'adulta.jpg')
             } else if (idade < 100) {
-                //idoso
                 img.setAttribute('src', 'velha.jpg')
             } else {
-                //Se erguer os braços Deus puxa.
                 img.setAttribute('src', 'mumia.jpg')
             }
         }
